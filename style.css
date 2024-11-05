@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+body{
+    background-image: url(images/continents/background.jpg);
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-color: #272941;
+    font-family: "Raleway", sans-serif;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    min-height: 100vh; 
+}
+#local{
+    background-color:  #484848;
+    padding: 15px 20px;
+    margin: 20px 0 20px 0;
+
+    font-size: 1.5rem;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+}
+
+#cities{
+    border-radius: 20px;
+    width: 100%;
+    text-shadow: 2px 2px 4px black;
+    text-align: center;
+}
+#cities th {
+    font-size: 2.2em;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    text-align: center;
+    border-bottom: 2px solid #333;
+}
+#cities td{
+    border: 1px solid #dedede;
+    padding: 8px;
+    font-size: 30px;
+    color: #ffffffc3;
+}
+#cities td img{
+    padding: 0;
+    margin: 0;
+    height: 100px;
+}
+#cities td:last-child {
+    font-weight: bold;
+    font-size: 3rem;
+    color: #ffffff;
+    padding: 20px;
+}
+#cities tr{
+    background-color: #333333;
+}
+#cities tr:nth-child(even){
+    background-color: #b5b5b5;
+}
+.col1{
+    width: 10%;
+}
+.col2{
+    width: 45%
+}
+
+
+#tableWrapper{
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers the content horizontally */
+    justify-content: center; /* Centers the content vertically */
+    min-height: 100vh; /* Optional: center vertically within the viewport */
+}
+#icon ion-icon{
+    color: #ffffff;
+    left: 50px;
+    top: 50px;
+    position: absolute;
+    font-size: 40px;
+}
+
+#tableHeading{
+    color: white;
+    font-size: 20px;
+    font-weight: 100;
+    font-family: monospace;
+    text-shadow: 2px 2px 3px#000000;
+}
+#ContinentTable{
+    width: 100%;
+    max-width: 800px;
+    color: rgb(246, 246, 246);
+    font-size: 20px;
+    text-align: center;
+    margin: 0 auto;
+    border-collapse: separate;
+    border-spacing: 20px;
+}
+#rows{
+    max-width: 800px;
+    padding: 100px 0 100px 0 ;
+    border-radius: 30px; 
+    font-family: sans-serif; 
+    font-weight: 100;
+    text-shadow: 2px 2px 3px rgb(8, 8, 8);
+    cursor: pointer;
+    position: relative;
+}
+#rows:hover{
+    background-color: #00000077;  
+}
+#rows h2{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    margin: 0;
+}
+#rows p{
+    position: absolute;
+    bottom: 50px;
+    left: 15px;
+    margin: 0;
+}
+.col01 {
+    background-image: url('images/continents/safari.jpeg');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+.col02{
+    background-image: url('images/continents/countryside.jpeg');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+.col03{
+    background-image: url('images/continents/church.jpeg');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+.col04{
+    background-image: url('images/continents/tower.jpeg');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+.col05{
+    background-image: url('images/continents/beach.jpeg');
+    background-size: cover;  
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+.col06{
+    background-image: url('images/continents/statue.jpg');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+}

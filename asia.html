@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>World Time</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <a href="index.html">
+        <span id="icon">
+        <ion-icon name="arrow-round-back"></ion-icon>
+        </span>
+    </a> 
+    <p id="local">Loading...</p>
+    <div id="output"></div>
+
+    <script>
+        var timer = setInterval(displayWorldTime, 1000);
+        var cities = [
+            { name: "China", capital: "Beijing", utcOffset: 8, flag: "China.png" },
+            { name: "India", capital: "New Delhi", utcOffset: 5.5, flag: "India.png" },
+            { name: "Indonesia", capital: "Jakarta", utcOffset: 7, flag: "Indonesia.png" },
+            { name: "Pakistan", capital: "Islamabad", utcOffset: 5, flag: "Pakistan.png" },
+            { name: "Bangladesh", capital: "Dhaka", utcOffset: 6, flag: "Bangladesh.png" }
+        ];
+
+        cities.sort(compare);
+
+        function compare(a, b) {
+            return a.name.localeCompare(b.name);
+        }
+
+        function getUtcTime() {
+            var dt = new Date();
+            return dt.getTime() + dt.getTimezoneOffset() * 60000;
+        }
+
+        function getCurrentTime(utcOffset) {
+            return new Date(getUtcTime() + utcOffset * 3600000).toLocaleTimeString();
+        }
+
+        function displayWorldTime() {
+            var dt = new Date();
+            document.getElementById("local").innerHTML = "Local Time: " + dt.toLocaleTimeString();
+
+            var output = `<table id="cities">`;
+            output += `
+                <tr>
+                    <th class="col1"></th>
+                    <th class="col2">Country</th>
+                    <th>Local Time</th>
+                </tr>
+            `;
+
+            for (let city of cities) {
+                output += `
+                    <tr>
+                        <td><img src="images/${city.flag}" alt="${city.name}"/></td>
+                        <td>
+                            ${city.name}<br>
+                            <span style="font-size: 3rem; color: white;">${city.capital}</span>
+                        </td>
+                        <td>${getCurrentTime(city.utcOffset)}</td>
+                    </tr>
+                `;
+            }
+
+            output += `</table>`;
+            document.getElementById("output").innerHTML = output;
+        }
+    </script>
+     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>   
+</body>
+</html>
